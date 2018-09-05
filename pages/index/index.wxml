@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container index">
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{swiperData}}"wx:key="{{index}}" >
+    <swiper-item bindtap="jumpBook" id="{{item.book._id}}">
+      <image src="{{item.img}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<slider bin  dchange="intervalChange" show-value min="500" max="2000"/> interval
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> duration -->
+<view class="main-content">
+<view class="content-item" wx:for="{{mainContent}}" wx:key="index" bindtap="jumpBook" date-id="{{item.books._id}}">
+<view class='title' >{{item.title}}</view>
+<view class='content' wx:for="{{item.books}}" wx:key="index" >
+<view class='box-l'>
+<image src='{{item.img}}'></image>
+</view>
+<view class='box-r'>
+<view class='book-title'>{{item.title}}</view>
+<view class="book-desc">{{item.desc}}</view>
+<view class='author'>
+<text class='author-l'>{{item.author}}</text>
+<view class='author-r'>
+<text class='update-time'>2tian</text>
+<text class='category'>houduan</text>
+<text class='many'>{{item.looknums}}</text>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>

@@ -1,7 +1,8 @@
 /**index.wxss**/
-.index .slide-image{
+.slide-image{
  width: 700rpx;
  height: 350rpx;
+ margin-left: 20rpx;
 }
 .content-item{
   margin-top: 40rpx;
@@ -45,5 +46,5 @@
 .box-r .author{
   display: flex; 
   justify-content:space-between;
- font-size: 20rpx;
+ font-size: 12px;
 }

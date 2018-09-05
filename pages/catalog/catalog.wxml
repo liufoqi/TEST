@@ -1,5 +1,6 @@
 <!--pages/catalog/catalog.wxml-->
 <view class="container catalog">
+<image src='/static/img/Flickr-1s-200px.svg' class='loading' wx:if="{{isLoading}}"></image>
   <view wx:for="{{catalogData}}" wx:key="{{index}}" class="catalog-item">
     <navigator url="{{'/pages/book/book?id=' + item._id + '&bookId=' + bookId}}" class="link">
       {{item.title}}

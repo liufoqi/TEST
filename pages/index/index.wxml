@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container index">
+<image src='/static/img/Spinner-1s-200px.svg' class='loading' wx:if="{{isLoading}}"></image>
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{swiperData}}"wx:key="{{index}}" >
@@ -13,7 +14,7 @@
 <slider bin  dchange="intervalChange" show-value min="500" max="2000"/> interval
 <slider bindchange="durationChange" show-value min="1000" max="10000"/> duration -->
 <view class="main-content">
-<view class="content-item" wx:for="{{mainContent}}" wx:key="index" bindtap="jumpBook" date-id="{{item.books._id}}">
+<view class="content-item" wx:for="{{mainContent}}" wx:key="index" bindtap="jumpBook" id="{{item.books._id}}">
 <view class='title' >{{item.title}}</view>
 <view class='content' wx:for="{{item.books}}" wx:key="index" >
 <view class='box-l'>

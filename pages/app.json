@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/details/details",
+    "pages/catalog/catalog",
+    "pages/book/book",
+    "pages/usercenter/usercenter",
+    "pages/collect/collect",
+    "pages/rrecord/rrecord"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "读书破万卷",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "我的首页"
+      },
+      {
+        "pagePath": "pages/rrecord/rrecord",
+        "text": "阅读记录"
+      },
+      {
+        "pagePath": "pages/collect/collect",
+        "text": "我的收藏"
+      }
+    ],
+    "backgroundColor": "#4a4a94",
+    "color": "#f1f1f1",
+    "selectedColor": "4e4e4e",
+    "borderStyle": "red"
+  }
+}

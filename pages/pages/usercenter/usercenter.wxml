@@ -1,0 +1,16 @@
+<!--pages/usercenter/usercenter.wxml-->
+<view class='user-main'>
+ <view class='user-box'>
+  <view class='user-boxup'>
+   <view class='user-boxl'>
+    <image></image>
+   <view class='user-boxr'> 
+    <text>用户名</text>
+    <text>个人签名</text>
+    <input type='text' placeholder=''></input>
+    <text></text>
+   </view>
+   </view>
+  </view>
+ </view>
+</view>

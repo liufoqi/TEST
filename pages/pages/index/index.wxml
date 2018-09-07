@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view>
+
+<view class="container index">
+<image src='/static/img/Spinner-1s-200px.svg' class='loading' wx:if="{{isLoading}}"></image>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{swiperData}}"wx:key="{{index}}" >
+    <swiper-item bindtap="jumpBook" id="{{item.book._id}}">
+      <image src="{{item.img}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button> -->
+<!-- <slider bin  dchange="intervalChange" show-value min="500" max="2000"/> 
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> -->
+<view class="main-content"  wx:key="{{index}}">
+<view class="content-item" wx:for="{{mainContent}}" wx:key="index" >
+<view class='title' >{{item.title}}</view>
+<view class='content' wx:for="{{item.books}}" wx:key="index"  bindtap="jumpBook" id="{{item._id}}" >
+<view class='box-l'>
+<image src='{{item.img}}'></image>
+</view>
+<view class='box-r'>
+<view class='book-title'>{{item.title}}</view>
+<view class="book-desc">{{item.desc}}</view>
+<view class='author'>
+<text class='author-l'>{{item.author}}</text>
+<view class='author-r'>
+<text class='update-time'>{{}}</text>
+<text class='category'>houduan</text>
+<text class='many'>{{item.looknums}}</text>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+<view wx:if="{{losdDone}}" >
+<view class='loading-more' wx:if="{{hasmore}}">
+<image src='/static/img/Ellipsis-1s-200px.svg' class='loadmore-img'></image>
+<text>正在加速加载中</text>
+</view>
+  <view class='no-more' wx:else>
+  <text class='no-more-text'>已经到底了</text>
+  <text class='line'></text>
+</view>
+</view>
+</view>

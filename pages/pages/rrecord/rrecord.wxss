@@ -1,0 +1,41 @@
+/* pages/rrecord/rrecord.wxss */
+.main{
+  margin-top:10px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  
+}.collect-l{
+  width: 230rpx;
+  height: 300rpx;
+}
+.collect-r{
+  margin-left: 30rpx;
+  padding-bottom: 5rpx;
+  width: 230px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.book-name{
+   -webkit-line-clamp:1;
+  font-size: 16px;
+  color: #333;
+}
+.book-desc{
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  line-height: 1.5;
+  color: #444;
+  font-size: 14px;
+}
+.book-author{
+ font-size: 12px;
+}
+.link{
+  font-size: 16px;
+  background: #9e9;
+}

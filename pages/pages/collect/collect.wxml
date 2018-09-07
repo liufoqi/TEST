@@ -1,0 +1,14 @@
+<!--pages/collect/collect.wxml-->
+
+<view class='collect'
+wx:for="{{books}}" wx:key="index">
+<view  bindtap='jumpBook' id="{{item.book._id}}" class='main'>
+  <image src="{{item.book.img}}" class='collect-l'></image>
+  <view class='collect-r'>
+  <view class='book-name'>书名：{{item.book.title}}</view>
+  <view class='book-desc'>简介：{{item.book.desc}}</view>
+  <view class='book-author'>作者：{{item.book.author}}</view>
+ </view>
+ </view>
+ <view class='book-delete' bindtap='delete' id="{{item.book._id}}" >》》》删除收藏《《《</view>
+</view>
